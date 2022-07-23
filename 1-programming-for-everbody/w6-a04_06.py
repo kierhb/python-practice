@@ -11,9 +11,13 @@
 ihr = input('Enter Hour: ')
 irt = input('Enter Rate: ')
 
-def grosspay (ihr, irt):
-    fhr = float(ihr)
-    frt = float(irt)
+def computepay (ihr, irt):
+    try:
+        fhr = float(ihr)
+        frt = float(irt)
+    except:
+        print('Error, numerical inputs only')
+        quit()
     
     if fhr > 40 :
         npay = 40 * frt
@@ -24,6 +28,6 @@ def grosspay (ihr, irt):
     
     return wage
 
-p = grosspay(ihr, irt)
+p = computepay(ihr, irt)
 print("Pay", p)
 
