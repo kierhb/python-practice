@@ -9,3 +9,17 @@
 #    You can download the sample data at http://www.py4e.com/code3/mbox-short.txt
 #    when you are testing below enter mbox-short.txt as the file name.
 
+fname = input("Enter file name: ")
+fhandle = open(fname)
+
+count = 0
+total = 0
+
+for line in fhandle:
+    if line.startswith("X-DSPAM-Confidence:"):
+    	count = count + 1
+    	strpline = line.lstrip("X-DSPAM-Confidence:")
+    	total = total + float(strpline)
+    	average = total/count
+
+print("Average spam confidence:", average)
