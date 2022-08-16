@@ -19,7 +19,7 @@ lst = tree.findall('comments/comment')
 for item in lst:
     count = count + 1
     t = item.find('count').text
-    total = total + float(t)
+    total = total + int(t)
 
 print('Count: ', count)
 print('Sum: ', total)
