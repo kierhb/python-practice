@@ -40,5 +40,13 @@ def arithmetic_arranger(problems, solver = False):
         else:
             first_row.append(" " * (len(second_operand[i]) - len(first_operand[i]) + 2) + first_operand[i])
 
+    # For Second Row
+    for i in range(len(second_operand)):
+        if len(second_operand[i]) > len(first_operand[i]):
+            second_row.append(operator[i] + " " + second_operand[i])
+        else:
+            second_row.append(operator[i] + " " * (len(first_operand[i]) - len(second_operand[i]) + 1) + second_operand[i])
+
+
 
 arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"])
