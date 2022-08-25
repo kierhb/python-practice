@@ -57,8 +57,16 @@ def arithmetic_arranger(problems, solver = False):
             if operator[i] == "+":
                 ans = str(int(first_operand[i]) + int(second_operand[i]))
             else:
-                ans = str(int(first_operand[i]) + int(second_operand[i]))
+                ans = str(int(first_operand[i]) - int(second_operand[i]))
         
+            if len(ans) > max(len(first_operand[i]), len(second_operand[i])):
+                fourth_row.append(" " + ans)
+            else:
+                fourth_row.append(" " * (max(len(first_operand[i]), len(second_operand[i])) - len(ans) + 2) + ans)
+        arranged = "    ".join(first_row) + "\n" + "    ".join(second_row) + "\n" + "    ".join(third_row) + "\n" + "    ".join(fourth_row)
+    else:
+        arranged = "    ".join(first_row) + "\n" + "    ".join(second_row) + "\n" + "    ".join(third_row)
+    
+    return arranged
 
-
-arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"])
+print(arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"]))
