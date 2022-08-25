@@ -57,6 +57,13 @@ def arithmetic_arranger(problems, solver = False):
         if not (first_operand[i].isdigit() and second_operand[i].isdigit()):
             return "Error: Numbers must only contain digits"
 
+    #Checking Width
+    for i in range(len(first_operand)):
+        if len(first_operand) > 4 < len(second_operand):
+            return "Error: Numbers cannot be more than four digits"
+    
+    
+
 
 
     
