@@ -47,6 +47,8 @@ def arithmetic_arranger(problems, solver = False):
         else:
             second_row.append(operator[i] + " " * (len(first_operand[i]) - len(second_operand[i]) + 1) + second_operand[i])
 
-
+    # For Third Row (Dashes)
+    for i in range(len(first_operand)):
+        third_row.append("-" * (max(len(first_operand[i]), len(second_operand[i])) + 2))
 
 arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"])
