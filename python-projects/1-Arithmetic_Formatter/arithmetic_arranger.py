@@ -33,10 +33,10 @@ def ar_ar(a):
 
 ar_ar('235 - 52')
 
-def arithmetic_arranger(problems):
+def arithmetic_arranger(problems, solver = False):
     #Checking for problems
     if len(problems) > 5:
-        print('Error: Too many problems')
+        return "Error: Too many problems"
 
     first_operand = []
     second_operand = []
@@ -50,7 +50,13 @@ def arithmetic_arranger(problems):
     
     #Checking Operation
     if '*' in operator or '/' in operator:
-        print("Error: Operator must be '+' or '-'")
+        return "Error: Operator must be '+' or '-'"
+
+    #Checking Digits
+    for i in range(len(first_operand)):
+        if not (first_operand[i].isdigit() and second_operand[i].isdigit()):
+            return "Error: Numbers must only contain digits"
+
 
 
     
