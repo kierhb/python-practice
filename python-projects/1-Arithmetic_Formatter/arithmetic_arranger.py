@@ -1,4 +1,5 @@
-def function(a):
+def ar_ar(a):
+    #Trial
     if len(a) >= 5:
         set1 = a.split()
         #First Number
@@ -19,8 +20,16 @@ def function(a):
             opr = a1 - b1
         else:
             opr = 'abort'
-    
+    else:
+        print('Error: Too many problems')
+
+    print('  ', a1)
+    print('+ ', b1)
+    print('----')
+
+    if len(a1) == 
+
     print(opr)
 
+ar_ar('235 - 52')
 
-function('82 - 3')
