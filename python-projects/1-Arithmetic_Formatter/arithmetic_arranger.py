@@ -47,5 +47,10 @@ def arithmetic_arranger(problems):
         first_operand.append(parts[0])
         second_operand.append(parts[2])
         operator.append(parts[1])
+    
+    #Checking Operation
+    if '*' in operator or '/' in operator:
+        print("Error: Operator must be '+' or '-'")
+
 
     
