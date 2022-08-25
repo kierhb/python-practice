@@ -33,3 +33,19 @@ def ar_ar(a):
 
 ar_ar('235 - 52')
 
+def arithmetic_arranger(problems):
+    #Checking for problems
+    if len(problems) > 5:
+        print('Error: Too many problems')
+
+    first_operand = []
+    second_operand = []
+    operator = []
+
+    for problem in problems:
+        parts = problem.split[]
+        first_operand.append(parts[0])
+        second_operand.append(parts[2])
+        operator.append(parts[1])
+
+    
