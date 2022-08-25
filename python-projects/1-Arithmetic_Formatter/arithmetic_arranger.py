@@ -50,5 +50,15 @@ def arithmetic_arranger(problems, solver = False):
     # For Third Row (Dashes)
     for i in range(len(first_operand)):
         third_row.append("-" * (max(len(first_operand[i]), len(second_operand[i])) + 2))
+    
+    # For Answer
+    if solver:
+        for i in range(len(first_operand)):
+            if operator[i] == "+":
+                ans = str(int(first_operand[i]) + int(second_operand[i]))
+            else:
+                ans = str(int(first_operand[i]) + int(second_operand[i]))
+        
+
 
 arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"])
