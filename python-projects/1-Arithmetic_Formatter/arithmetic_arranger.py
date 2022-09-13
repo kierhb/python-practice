@@ -45,7 +45,7 @@ def arithmetic_arranger(problems, solver = False):
         if len(second_operand[i]) > len(first_operand[i]):
             second_row.append(operator[i] + " " + second_operand[i])
         else:
-            second_row.append(operator[i] + " " * (len(first_operand[i]) - len(second_operand[i]) + 1) + second_operand[i])
+            second_row.append(operator[i] + " " * (len(first_operand[i]) - len(second_operand[i]) + 2) + second_operand[i])
 
     # For Third Row (Dashes)
     for i in range(len(first_operand)):
@@ -69,4 +69,4 @@ def arithmetic_arranger(problems, solver = False):
     
     return arranged
 
-print(arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"]))
+print(arithmetic_arranger(["2 + 8", "1 - 3801", "9999 + 9999", "523 - 49"]))
