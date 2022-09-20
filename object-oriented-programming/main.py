@@ -50,6 +50,24 @@ class Item:
             return False
 
     def __repr__(self):
-        return f"Item('{self.name}', {self.price}, {self.quantity})"
+        return f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity})"
 
 
+class Phone(Item):
+    def __init__(self, name: str, price: float, quantity = 0, broken = 0):
+        # Call to super function to have access to all attributes / methods
+        super().__init__(
+            name, price, quantity
+        )
+
+        # Run validations to the received arguments
+        assert broken >= 0, f"Broken Phones {broken} is not greater than or equal to zero!"
+       
+        # Assign to self object
+        self.broken = broken
+
+
+phone1 = Phone("jscPhonev10", 500, 5, 1)
+
+print(Item.all)
+print(Phone.all)
