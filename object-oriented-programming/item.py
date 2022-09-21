@@ -1,4 +1,5 @@
 import csv
+from xml.sax.handler import property_declaration_handler
 
 
 class Item:
@@ -12,7 +13,7 @@ class Item:
 
         # Assign to self object
         self.__name = name
-        self.price = price
+        self.__price = price
         self.quantity = quantity
 
         # Actions to execute
@@ -30,11 +31,18 @@ class Item:
         else:
             self.__name = value
 
-    def calculate_total_price(self):
-        return self.price * self.quantity
+    @property
+    def price(self):
+        return self.__price
 
     def apply_discount(self):
-        self.price = self.price * self.pay_rate
+        self.__price = self.__price * self.pay_rate
+
+    def apply_increment(self, increment_value):
+        self.__price = self.__price + self.__price * increment_value
+
+    def calculate_total_price(self):
+        return self.price * self.quantity
 
     @classmethod
     def instantiate_from_csv(cls):
