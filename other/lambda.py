@@ -1,4 +1,5 @@
 # Lambda Functions
+# When the function is one-liner, it is common to use Lambda Function 
 
 double = lambda num : num * 2
 
