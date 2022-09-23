@@ -2,6 +2,8 @@
 '''
     map() = is used to run a function upon each item in an iterable item like list and create a new list with the same number of items,
             but the values of each item can be changed.
+
+    map(function, sequence)
 '''
 
 mapnumbers1 = [1, 2, 3]
@@ -28,6 +30,8 @@ print(list(quad_numbers))
 '''
     filter() = takes an iterable and returns a filter object which is another iterable but without some of the original items, by returning True or False from
                the filtering function
+
+    filter(function, sequence)
 '''
 
 fnumbers1 = [7, 8, 9, 10, 11, 12]
@@ -45,6 +49,8 @@ print(list(odd))
 
 '''
     reduce() = is used to calculate a value out of a sequence like a list
+
+    reduce(function, sequence)
 '''
 from functools import reduce
 
