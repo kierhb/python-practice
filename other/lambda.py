@@ -1,5 +1,6 @@
 # Lambda Functions
 # When the function is one-liner, it is common to use Lambda Function 
+# lambda arguments: expression
 
 double = lambda num : num * 2
 
