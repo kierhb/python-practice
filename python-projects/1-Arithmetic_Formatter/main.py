@@ -39,6 +39,14 @@ def arithmetic_arranger(problems, solver = False):
                     return "Error: Numbers must only contain digits"
             
 
+            # Checking Width
+            '''
+                Each operand (aka number on each side of the operator) has a max of four digits in width. Otherwise, the error string returned will be: Error: Numbers cannot be more than four digits.
+            '''
+            for i in range(len(first_operand)):
+                if len(first_operand[i]) > 4 or len(second_operand[i]) > 4:
+                    return "Error: Numbers cannot be more than four digits"
+
 
     print(first_operand)
     #print(operators)
